@@ -19,16 +19,17 @@ _io_v7_0 = [ # Documented by @smunaut
     # Clk
     ("clk25", 0, Pins("P3"), IOStandard("LVCMOS33")),
 
-    # Led
-    ("user_led_n", 0, Pins("U16"), IOStandard("LVCMOS33")),
+    # Led 
+    # U16 for uart tx  -- j5 2022-11-23 
+    # ("user_led_n", 0, Pins("U16"), IOStandard("LVCMOS33")),
 
     # Reset button
     ("cpu_reset_n", 0, Pins("K18"), IOStandard("LVCMOS33"), Misc("PULLMODE=UP")),
 
     # Serial
     ("serial", 0,
-        Subsignal("tx", Pins("J17")),
-        Subsignal("rx", Pins("H18")),
+        Subsignal("tx", Pins("U16")),
+        Subsignal("rx", Pins("V1")),
         IOStandard("LVCMOS33")
     ),
 
