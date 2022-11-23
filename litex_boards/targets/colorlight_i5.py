@@ -100,7 +100,7 @@ class BaseSoC(SoCCore):
         local_ip               = "",
         remote_ip              = "",
         eth_phy                = 0,
-        with_led_chaser        = True,
+        with_led_chaser        = False,
         use_internal_osc       = False,
         sdram_rate             = "1:1",
         with_video_terminal    = False,
